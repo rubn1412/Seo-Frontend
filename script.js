@@ -21,7 +21,7 @@ document.getElementById('generateBtn').addEventListener('click', async () => {
     const data = await response.json();
 
     if (data?.title && data?.content) {
-    outputDiv.innerHTML = marked.parse(`# ${data.title}\n\n${data.content}`);
+    outputDiv.innerHTML = marked.parse(`${data.title}\n\n${data.content}`);
 
 
     } else {
